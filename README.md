@@ -1,1 +1,3 @@
 # Data Driving Risk Management and Customer Segmentation for Vehicle Insurance Optimization
+## Background
+The Automotive Insurance Analytics program is designed to optimize many operational areas of automotive insurance, including risk assessment and claims management, customer segmentation, education, and security initiatives. Auto insurance is an important part of personal financial planning because it protects you from financial losses caused by accidents, thefts, and other disasters. Insurers, on the other hand, must combine profitability with competitive premiums. To investigate this complex dynamic, the study employed a vast dataset that included precise information about insurance plans, customer demographics, vehicle characteristics, and claims history.
