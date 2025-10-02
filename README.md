@@ -104,3 +104,26 @@ plt.xlabel('Age')
 plt.ylabel('Vehicle Value')
 plt.show()
 ```
+---
+## 🚀 Usage
+### Sample workflow for claim prediction:
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+
+X = data[['age', 'driving_experience', 'vehicle_value']]
+y = data['claim']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+print("Accuracy:", model.score(X_test, y_test))
+```
+---
+## 🔮 Future Work
+- Explore **Random Forests and XGBoost** for improved predictive accuracy  
+- Apply **SHAP or LIME** for model interpretability  
+- Conduct **survival analysis** to model time-to-claim risk  
+- Build a **dashboard (Power BI / Tableau)** for insurance managers to interact with real-time risk profiles  
