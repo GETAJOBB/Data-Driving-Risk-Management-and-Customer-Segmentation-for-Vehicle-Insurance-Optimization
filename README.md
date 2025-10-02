@@ -74,3 +74,11 @@ plt.xlabel('Age')
 plt.ylabel('Count')
 plt.show()
 
+### Driving Experience Distribution
+```python
+sns.histplot(data['driving_experience'], color='green')
+plt.title('Distribution of Driving Experience (Years)')
+plt.xlabel('Years of Driving Experience')
+plt.ylabel('Count')
+plt.show()
+
