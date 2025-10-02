@@ -73,7 +73,7 @@ plt.title('Age Distribution of Policyholders')
 plt.xlabel('Age')
 plt.ylabel('Count')
 plt.show()
-
+```
 ### Driving Experience Distribution
 ```python
 sns.histplot(data['driving_experience'], color='green')
@@ -81,4 +81,26 @@ plt.title('Distribution of Driving Experience (Years)')
 plt.xlabel('Years of Driving Experience')
 plt.ylabel('Count')
 plt.show()
+```
+### Premium vs Vehicle Value
+```python
+sns.scatterplot(data=data, x='vehicle_value', y='premium', hue='claim')
+plt.title('Premium vs Vehicle Value (with Claims)')
+plt.xlabel('Vehicle Value')
+plt.ylabel('Premium Amount')
+plt.show()
+```
+### Customer Segmentation (K-Means Clustering)
+```python
+from sklearn.cluster import KMeans
 
+X = data[['age', 'driving_experience', 'vehicle_value']]
+kmeans = KMeans(n_clusters=3, random_state=42).fit(X)
+data['cluster'] = kmeans.labels_
+
+sns.scatterplot(x=data['age'], y=data['vehicle_value'], hue=data['cluster'], palette='Set2')
+plt.title('Customer Segmentation by Age & Vehicle Value')
+plt.xlabel('Age')
+plt.ylabel('Vehicle Value')
+plt.show()
+```
